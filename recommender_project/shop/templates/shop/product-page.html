@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/css/report.css' %}">
+    <h1>PRODUCT-PAGE</h1>
+    <h2>Product {{ product }}</h2>
+    {% for recommend_product in recommend_products %}
+        <h3>Recommend {{ recommend_product }}<h3>
+    {% endfor %}
+    <script src="{% static '/shop/js/report.js' %}" type="text/javascript"></script> 
+</body>
+</html>
